@@ -35,6 +35,13 @@
 
 require "calculator"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe "add" do
   it "adds 0 and 0" do
     add(0,0).should == 0

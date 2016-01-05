@@ -115,6 +115,13 @@
 #
 require "hello"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe "the hello function" do
   it "says hello" do
     hello.should == "Hello!"

@@ -17,6 +17,34 @@
 
 require "temperature"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
+describe "temperature conversion functions" do
+  describe "#ftoc" do
+    
+    it "converts 32 to 0" do
+      ftoc(32).should == 0
+    end
+
+    it "converts -40 to -40" do
+      ftoc(-40).should == -40
+    end
+  end
+
+  describe "#ctof" do
+
+    it "converts 0 tuh 32 licktey split" do
+      ctof(0).should == 32
+    end
+  end
+
+
+end
 describe "temperature conversion functions" do
 
   describe "#ftoc" do
