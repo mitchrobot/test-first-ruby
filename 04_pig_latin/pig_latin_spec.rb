@@ -19,6 +19,13 @@
 
 require "pig_latin"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe "#translate" do
 
   it "translates a word beginning with a vowel" do

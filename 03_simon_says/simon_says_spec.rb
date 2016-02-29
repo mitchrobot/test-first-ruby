@@ -13,6 +13,13 @@
 
 require "simon_says"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe "Simon says" do
   describe "echo" do
     it "should echo hello" do
