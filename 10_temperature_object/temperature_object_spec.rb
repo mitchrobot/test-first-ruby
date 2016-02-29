@@ -19,6 +19,13 @@
 
 require "temperature"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe Temperature do
 
   describe "can be constructed with an options hash" do

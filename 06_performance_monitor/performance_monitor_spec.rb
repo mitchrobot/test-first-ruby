@@ -10,6 +10,13 @@
 
 require "performance_monitor"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 require "time"  # loads up the Time.parse method -- do NOT create time.rb!
 
 describe "Performance Monitor" do

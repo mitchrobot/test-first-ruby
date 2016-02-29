@@ -14,6 +14,13 @@
 
 require 'book'
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe Book do
 
   before do

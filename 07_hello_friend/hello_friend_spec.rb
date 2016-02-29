@@ -90,6 +90,13 @@
 
 require "friend"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe Friend do
   it "says hello" do
     Friend.new.greeting.should == "Hello!"

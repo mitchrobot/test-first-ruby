@@ -9,6 +9,13 @@
 
 require 'timer'
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe "Timer" do
   before(:each) do
     @timer = Timer.new

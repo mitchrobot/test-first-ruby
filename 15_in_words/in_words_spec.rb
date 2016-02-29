@@ -20,6 +20,13 @@
 
 require "in_words"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe Fixnum do
 
   it "reads 0 to 9" do

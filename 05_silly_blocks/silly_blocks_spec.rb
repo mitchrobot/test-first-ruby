@@ -8,6 +8,13 @@
 
 require "silly_blocks"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe "some silly block functions" do
 
   describe "reverser" do

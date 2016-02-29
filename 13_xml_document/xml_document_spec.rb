@@ -16,6 +16,13 @@
 
 require "xml_document"
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe XmlDocument do
   before do
     @xml = XmlDocument.new

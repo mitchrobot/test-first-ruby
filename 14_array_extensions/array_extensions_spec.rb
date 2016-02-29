@@ -8,6 +8,13 @@
 
 require "array_extensions" # we don't call it "array.rb" since that would be confusing
 
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    # Disable the `expect` sytax...
+    c.syntax = :should
+  end
+end
+
 describe Array do
 
   describe "#sum" do
