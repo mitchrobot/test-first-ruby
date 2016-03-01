@@ -48,10 +48,6 @@ class RPNCalculator
 			@stack.pop
 			val1 = @stack.last
 			@stack.pop
-		# elsif @stack.length == 1
-		# 	val2 = @stack.last
-		# 	@stack.pop
-		# 	val1 = @value
 		else
 			error_empty
 		end
@@ -61,8 +57,8 @@ class RPNCalculator
 	def error_empty
 		begin
 			raise "calculator is empty"
-		rescue
-			puts "calculator is empty"
+		rescue Exception => e
+			puts "calculator is empty error"
 		end
 	end
 end
